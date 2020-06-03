@@ -66,6 +66,8 @@ let bottomContentContent = document.querySelectorAll(".bottom-content .text-cont
 let contactTitle = document.querySelector(".contact h4");
 let contactContent = document.querySelectorAll(".contact p");
 
+let footerContent = document.querySelector("footer p");
+
 //Changing
 
 
@@ -103,6 +105,11 @@ bottomContentTitle[2].textContent = siteContent["main-content"]["vision-h4"];
 bottomContentContent[2].textContent = siteContent["main-content"]["vision-content"];
 
 contactTitle.textContent = siteContent["contact"]["contact-h4"];
-contactContent[0].textContent = siteContent["contact"]["address"];
+//This isn't working either
+contactContent[0].textContent = "123 Way 456 Street \n Somewhere, USA";
 contactContent[1].textContent = siteContent["contact"]["phone"];
 contactContent[2].textContent = siteContent["contact"]["email"];
+
+footerContent.textContent = siteContent["footer"]["copyright"];
+
+//New content
