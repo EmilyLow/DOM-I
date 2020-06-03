@@ -63,6 +63,9 @@ middleImage.setAttribute('src', "img/mid-page-accent.jpg" );
 let bottomContentTitle = document.querySelectorAll(".bottom-content .text-content h4");
 let bottomContentContent = document.querySelectorAll(".bottom-content .text-content p");
 
+let contactTitle = document.querySelector(".contact h4");
+let contactContent = document.querySelectorAll(".contact p");
+
 //Changing
 
 
@@ -98,3 +101,8 @@ bottomContentContent[1].textContent = siteContent["main-content"]["product-conte
 
 bottomContentTitle[2].textContent = siteContent["main-content"]["vision-h4"];
 bottomContentContent[2].textContent = siteContent["main-content"]["vision-content"];
+
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+contactContent[0].textContent = siteContent["contact"]["address"];
+contactContent[1].textContent = siteContent["contact"]["phone"];
+contactContent[2].textContent = siteContent["contact"]["email"];
