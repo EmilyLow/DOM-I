@@ -41,8 +41,50 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let mainHeader = document.getElementsByTagName('h1')[0];
-console.log(mainHeader);
+//Selecting
+let header = document.querySelector('header');
 
 
-mainHeader.textContent = "DOM IS AWESOME";
+
+const navElements = document.querySelectorAll('a'); //All a's in NodeList
+
+let title = document.getElementsByTagName('h1')[0];
+let titleButton = document.querySelector('button');
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', "img/header-img.png")
+
+let topContentTitle = document.querySelectorAll(".top-content .text-content h4");
+let topContentContent = document.querySelectorAll(".top-content .text-content p");
+
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', "img/mid-page-accent.jpg" )
+
+
+//Changing
+
+
+header.style.display = "flex";
+
+
+//first \n doesn't work
+title.textContent = "DOM\nis\nAWESOME";
+//title.textContent = siteContent["cta"]["h1"]
+
+navElements[0].textContent = "Services";
+navElements[1].textContent = "Product";
+navElements[2].textContent = "Vision";
+navElements[3].textContent = "Features";
+navElements[4].textContent = "About";
+navElements[5].textContent = "Contact";
+
+titleButton.textContent = "Get Started";
+
+topContentTitle[0].textContent = siteContent["main-content"]["features-h4"];
+topContentContent[0].textContent = siteContent["main-content"]["features-content"];
+
+topContentTitle[1].textContent = siteContent["main-content"]["about-h4"];
+topContentContent[1].textContent = siteContent["main-content"]["about-content"];
+
+console.log("test2");
+
