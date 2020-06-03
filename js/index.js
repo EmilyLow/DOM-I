@@ -113,3 +113,6 @@ contactContent[2].textContent = siteContent["contact"]["email"];
 footerContent.textContent = siteContent["footer"]["copyright"];
 
 //New content
+
+
+navElements.forEach(item => item.style.color = "green" );
