@@ -116,3 +116,9 @@ footerContent.textContent = siteContent["footer"]["copyright"];
 
 
 navElements.forEach(item => item.style.color = "green" );
+
+let entireNav = document.querySelector("nav");
+entireNav.append("Portal");
+entireNav.prepend("Void");
+
+entireNav.style.color = "green";
