@@ -58,8 +58,10 @@ let topContentContent = document.querySelectorAll(".top-content .text-content p"
 
 
 let middleImage = document.getElementById("middle-img");
-middleImage.setAttribute('src', "img/mid-page-accent.jpg" )
+middleImage.setAttribute('src', "img/mid-page-accent.jpg" );
 
+let bottomContentTitle = document.querySelectorAll(".bottom-content .text-content h4");
+let bottomContentContent = document.querySelectorAll(".bottom-content .text-content p");
 
 //Changing
 
@@ -88,3 +90,11 @@ topContentContent[1].textContent = siteContent["main-content"]["about-content"];
 
 console.log("test2");
 
+bottomContentTitle[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentContent[0].textContent = siteContent["main-content"]["services-content"];
+
+bottomContentTitle[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentContent[1].textContent = siteContent["main-content"]["product-content"];
+
+bottomContentTitle[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomContentContent[2].textContent = siteContent["main-content"]["vision-content"];
