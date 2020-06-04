@@ -49,6 +49,7 @@ let header = document.querySelector('header');
 const navElements = document.querySelectorAll('a'); //All a's in NodeList
 
 let title = document.getElementsByTagName('h1')[0];
+
 let titleButton = document.querySelector('button');
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', "img/header-img.png")
@@ -74,9 +75,19 @@ let footerContent = document.querySelector("footer p");
 header.style.display = "flex";
 
 
-//first \n doesn't work
-title.textContent = "DOM\nis\nAWESOME";
+
+title.textContent = "DOM\nis\nawesome";
+//title.textContent = siteContent["cta"]["h1"];
+//title.textContent =  'DOM <br> Is <br> Awesome';
 //title.textContent = siteContent["cta"]["h1"]
+
+// let lineBreak = document.createElement("br");
+// title.textContent = "DOM";
+// textContent.append(lineBreak);
+// textContent.append("is");
+// textContent.append(lineBreak);
+// textContent.append("Awesome");
+
 
 navElements[0].textContent = "Services";
 navElements[1].textContent = "Product";
@@ -92,8 +103,6 @@ topContentContent[0].textContent = siteContent["main-content"]["features-content
 
 topContentTitle[1].textContent = siteContent["main-content"]["about-h4"];
 topContentContent[1].textContent = siteContent["main-content"]["about-content"];
-
-console.log("test2");
 
 bottomContentTitle[0].textContent = siteContent["main-content"]["services-h4"];
 bottomContentContent[0].textContent = siteContent["main-content"]["services-content"];
@@ -118,7 +127,7 @@ footerContent.textContent = siteContent["footer"]["copyright"];
 navElements.forEach(item => item.style.color = "green" );
 
 let entireNav = document.querySelector("nav");
-entireNav.append("Portal");
-entireNav.prepend("Void");
+entireNav.append("Void");
+entireNav.prepend("Portal");
 
 entireNav.style.color = "green";
