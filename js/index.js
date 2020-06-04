@@ -40,3 +40,94 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Selecting
+let header = document.querySelector('header');
+
+
+
+const navElements = document.querySelectorAll('a'); //All a's in NodeList
+
+let title = document.getElementsByTagName('h1')[0];
+
+let titleButton = document.querySelector('button');
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', "img/header-img.png")
+
+let topContentTitle = document.querySelectorAll(".top-content .text-content h4");
+let topContentContent = document.querySelectorAll(".top-content .text-content p");
+
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', "img/mid-page-accent.jpg" );
+
+let bottomContentTitle = document.querySelectorAll(".bottom-content .text-content h4");
+let bottomContentContent = document.querySelectorAll(".bottom-content .text-content p");
+
+let contactTitle = document.querySelector(".contact h4");
+let contactContent = document.querySelectorAll(".contact p");
+
+let footerContent = document.querySelector("footer p");
+
+//Changing
+
+
+header.style.display = "flex";
+
+
+
+title.textContent = "DOM\nis\nawesome";
+//title.textContent = siteContent["cta"]["h1"];
+//title.textContent =  'DOM <br> Is <br> Awesome';
+//title.textContent = siteContent["cta"]["h1"]
+
+// let lineBreak = document.createElement("br");
+// title.textContent = "DOM";
+// textContent.append(lineBreak);
+// textContent.append("is");
+// textContent.append(lineBreak);
+// textContent.append("Awesome");
+
+
+navElements[0].textContent = "Services";
+navElements[1].textContent = "Product";
+navElements[2].textContent = "Vision";
+navElements[3].textContent = "Features";
+navElements[4].textContent = "About";
+navElements[5].textContent = "Contact";
+
+titleButton.textContent = "Get Started";
+
+topContentTitle[0].textContent = siteContent["main-content"]["features-h4"];
+topContentContent[0].textContent = siteContent["main-content"]["features-content"];
+
+topContentTitle[1].textContent = siteContent["main-content"]["about-h4"];
+topContentContent[1].textContent = siteContent["main-content"]["about-content"];
+
+bottomContentTitle[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentContent[0].textContent = siteContent["main-content"]["services-content"];
+
+bottomContentTitle[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentContent[1].textContent = siteContent["main-content"]["product-content"];
+
+bottomContentTitle[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomContentContent[2].textContent = siteContent["main-content"]["vision-content"];
+
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+//This isn't working either
+contactContent[0].textContent = "123 Way 456 Street \n Somewhere, USA";
+contactContent[1].textContent = siteContent["contact"]["phone"];
+contactContent[2].textContent = siteContent["contact"]["email"];
+
+footerContent.textContent = siteContent["footer"]["copyright"];
+
+//New content
+
+
+navElements.forEach(item => item.style.color = "green" );
+
+let entireNav = document.querySelector("nav");
+entireNav.append("Void");
+entireNav.prepend("Portal");
+
+entireNav.style.color = "green";
